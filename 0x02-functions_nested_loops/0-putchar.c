@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Entry point.
+ * main - puts char entry point.
  *
  * Return: Always 0 (Success.)
  */
