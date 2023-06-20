@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _abs - computes the absolute value of an integrr
+ * @n: The integer to be computed.
  * Return: the absolute value of int
  *
  */
