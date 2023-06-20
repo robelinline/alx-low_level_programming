@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * add - adds two integrers 
- * @num1: The first integer to be added.
- * @num2: The second integer to be added.
+ * @x: The first integer to be added.
+ * @y: The second integer to be added.
  * Return: Always 0.
  *
  */
