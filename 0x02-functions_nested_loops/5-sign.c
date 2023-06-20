@@ -2,7 +2,7 @@
 
 /**
  * print_sign - prints the sign of a numver
- * -1 and prints - if n is less than zero
+ * Return -1 and prints - if n is less than zero
  */
 int print_sign(int n)
 {
