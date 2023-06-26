@@ -1,10 +1,8 @@
 #include "main.h"
-
 /**
  * _strcpy - Copies  variable 
  * @dest: This is destiny
  * @src: This is the copia
- *
  * Return: This return copy
  */
 char *_strcpy(char *dest, char *src)
