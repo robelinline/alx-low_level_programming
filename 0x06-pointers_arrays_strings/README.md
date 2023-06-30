@@ -1,0 +1,1 @@
+pointer arrary and strings
