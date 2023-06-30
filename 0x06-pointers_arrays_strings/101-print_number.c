@@ -1,9 +1,9 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * print_number - print number 
- * @n: integer
- * @x: swap 
+ * @n: int
  * Return: void
  */
 void print_number(int n)
@@ -15,8 +15,8 @@ void print_number(int n)
 		_putchar('-');
 		n *= -1;
 	}
-
-	x = n;
+	else
+		x = n;
 
 	if (x / 10)
 		print_number(x / 10);
