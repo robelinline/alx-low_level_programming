@@ -1,25 +1,21 @@
 #include "main.h"
-#include <limits.h>
 
 /**
- * print_number - print number 
- * @n: int
- * Return: void
+ * print_number - Prints an integer.
+ * @n:  integ
  */
 void print_number(int n)
 {
-	unsigned int i;
+	unsigned int num = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		i = -n;
+		num = -num;
 	}
-	else
-		i = n;
-	if (i / 10)
-	{
-		print_number(i / 10);
-	}
-	_putchar('0' + i % 10);
+
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	_putchar((num % 10) + '0');
 }
