@@ -3,6 +3,7 @@
 /**
  * print_number - print number 
  * @n: integer
+ * @x: swap 
  * Return: void
  */
 void print_number(int n)
