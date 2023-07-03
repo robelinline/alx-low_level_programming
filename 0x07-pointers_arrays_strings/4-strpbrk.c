@@ -4,8 +4,7 @@
  * _strpbrk - searches a string
  * @s: first string.
  * @accept: second string.
- * Return: a pointer 
- *
+ * Return: a pointer
  */
 char *_strpbrk(char *s, char *accept)
 {
