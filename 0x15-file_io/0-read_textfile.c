@@ -1,47 +1,47 @@
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * read_textfile - prints text from a file
+ * read_textfile - reads a text file and prints it.
  *
- * @filename: name of the file
- * @letters: number of characters to read
+ * @filename: const char type pointer to file to be read
  *
- * Return: actual number of letters read, 0 if end of file
+ * @letters: size_t type
+ *
+ * Return: 0
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file;
-	int length, wrotechars;
-	char *buf;
+	int fp;
+	ssize_t fpRead, fpWrite, fpClose;
+	char *lineBuffer;
 
-	if (filename == NULL || letters == 0)
-		return (0);
-	buf = malloc(sizeof(char) * (letters));
-	if (buf == NULL)
+	if (filename == NULL)
 		return (0);
 
-	file = open(filename, O_RDONLY);
-	if (file == -1)
-	{
-		free(buf);
-		return (0);
-	}
-	length = read(file, buf, letters);
-	if (length == -1)
-	{
-		free(buf);
-		close(file);
-		return (0);
-	}
+	lineBuffer = malloc(sizeof(char) * letters);
 
-	wrotechars = write(STDOUT_FILENO, buf, length);
+	if (lineBuffer == NULL)
+		return (-1);
 
-	free(buf);
-	close(file);
-	if (wrotechars != length)
+	fp = open(filename, O_RDONLY);
+
+	if (fp == -1)
 		return (0);
-	return (length);
+
+	fpRead = read(fp, lineBuffer, letters);
+
+	if (fpRead == -1)
+		return (-1);
+
+	fpWrite = write(STDOUT_FILENO, lineBuffer, fpRead);
+
+	if (fpWrite == -1)
+		return (-1);
+	fpClose = close(fp);
+
+	if (fpClose == -1)
+		return (-1);
+
+	return (fpRead);
 }
-
