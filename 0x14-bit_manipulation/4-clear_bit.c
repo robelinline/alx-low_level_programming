@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * clear_bit - Sets the value
  * @index: The index

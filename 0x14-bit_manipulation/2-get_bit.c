@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * get_bit - Gets the value
  * @n: The bit

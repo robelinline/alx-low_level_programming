@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * set_bit - Sets the value
  * @n: A pointer 
